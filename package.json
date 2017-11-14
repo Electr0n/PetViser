@@ -24,10 +24,9 @@
     "lint:server": "node_modules/.bin/eslint server/",
     "lint": "npm run lint:client && npm run lint:server",
     "precommit": "lint-staged",
-    "prepush": "npm run test",
-    "test": "npm run test:server && npm run test:client",
-    "test:client": "cd client && npm run test && cd ..",
-    "test:server": "cd server && npm run test && cd .."
+    "prepush": "npm run test:server && npm run test:client",
+    "test:client": "cd client && npm test && cd ..",
+    "test:server": "cd server && npm test && cd .."
   },
   "devDependencies": {
     "eslint": "^4.11.0",

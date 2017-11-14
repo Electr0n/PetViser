@@ -7,4 +7,3 @@ on prepush will run test automatically
 to run it manualy:
  - npm run test:server
  - npm run test:client
- - npm run test
