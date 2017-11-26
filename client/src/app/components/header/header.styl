@@ -1,0 +1,77 @@
+.header__container
+  display flex
+  flex-flow row
+  align-items center
+  width 100%
+  min-height 100px
+  height 100px
+  background-color #f9f9f9
+  border-bottom 1px solid #3c4a61
+
+.header__logo
+  height 100px
+  width 100px
+  margin-right 50px
+  background-image url('../images/logo.png')
+  background-size cover
+  -moz-transform: scaleX(-1)
+  -o-transform: scaleX(-1)
+  -webkit-transform: scaleX(-1)
+  transform: scaleX(-1)
+  filter: FlipH
+  -ms-filter: 'FlipH'
+
+.header__title
+  font-size 42px
+  text-transform uppercase
+
+.header__nav-bar
+  display flex
+  flex-flow row
+  align-items center
+  justify-content flex-end
+  flex-grow 1
+  height 100%
+
+.nav-bar__advert
+  flex-grow 1
+
+.nav-bar__container
+  display flex
+  align-items center
+  width auto
+  font-size 30px
+  a
+    position relative
+    margin-right 40px
+    text-decoration none
+    &::after
+      content ''
+      width 0px
+      height 1px
+      background-color #8dc63f
+      position absolute
+      bottom 0
+      left 50%
+    &:hover::after
+      -webkit-transition width 0.3s, left 0.3s
+      -moz-transition width 0.3s, left 0.3s
+      -ms-transition width 0.3s, left 0.3s
+      transition width 0.3s, left 0.3s
+      transform translateX(-50%)
+      width 100%
+
+.nav-bar__mobile
+  display none
+  width 80px
+  height 80px
+  background-image url('../images/menu.png')
+  background-size cover
+
+@media screen and (max-width : 768px)
+  .nav-bar__container
+  .nav-bar__advert
+    display none
+  .nav-bar__mobile
+    display flex
+    margin-right 50px
